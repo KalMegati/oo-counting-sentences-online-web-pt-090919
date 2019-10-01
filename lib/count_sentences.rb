@@ -15,6 +15,6 @@ class String
   end
 
   def count_sentences
-    self.split(".").length
+    self.reduce { |count, character| count + 1 if character = character.capitalize }
   end
 end
